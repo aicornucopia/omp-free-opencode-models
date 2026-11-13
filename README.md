@@ -19,7 +19,20 @@ not advertise tools that are unavailable in the session.
 
 Requires OMP 18.16.0 or later.
 
-From this checkout:
+Install directly from GitHub:
+
+```sh
+omp plugin install https://github.com/aicornucopia/omp-free-opencode-models
+```
+
+Restart OMP. No build or dependency installation step: OMP loads the extension's
+TypeScript directly. Later, update to the latest commit with `omp plugin upgrade
+omp-free-opencode-models`, or remove it with `omp plugin uninstall
+omp-free-opencode-models`.
+
+### From a local checkout
+
+For development against a working copy:
 
 ```sh
 omp plugin link .
@@ -30,8 +43,6 @@ Restart OMP after linking. To try the extension without installing it:
 ```sh
 omp --no-extensions -e ./index.ts --model opencode-free/big-pickle
 ```
-
-No build or dependency installation is needed to load the extension in OMP.
 
 ## Use
 
